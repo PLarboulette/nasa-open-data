@@ -14,6 +14,7 @@
   "git": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "latest",
     "express": "^4.13.4",
     "express-json": "^1.0.0",

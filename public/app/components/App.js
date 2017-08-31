@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from './Header'
-import Users from './pictures/Items'
+import Pictures from "./pictures/Pictures";
 
 const users = [
     {
@@ -19,9 +19,8 @@ const users = [
 
 const App = () => (
     <div>
-
         <Header />
-        <Users users={users} />
+        <Pictures/>
     </div>
 );
 

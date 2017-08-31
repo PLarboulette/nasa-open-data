@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const http = require('http').Server(app);
-const Router = require("./api/router/Router");
+const Router = require("./api/Router");
 
 
 app.set('port', 3000);

@@ -3,12 +3,14 @@
  */
 
 import React, { PropTypes } from 'react';
+import Picture from "./Picture";
 
 const PicturesView = ({pictures, filter}) => {
 
     return (
         <div>
-            Hello pictures !
+            <Picture name="{'Earth"/>
+            <Picture name="{'Mars"/>
         </div>
     )
 };
@@ -16,7 +18,6 @@ const PicturesView = ({pictures, filter}) => {
 PicturesView.propTypes = {
     pictures : PropTypes.array,
     filter: PropTypes.string,
-
 };
 
 class Pictures extends React.Component {
@@ -25,14 +26,14 @@ class Pictures extends React.Component {
         super(props);
     }
 
-    getPictures = () => {
+    getPictures () {
         console.log("Get pictures !")
     };
 
     render () {
         return (
             <div>
-                <button onClick={(e) => this.getPictures()} />
+                <button onClick={(e) => this.getPictures()}> Click </button>
                 <PicturesView />
             </div>
         )
