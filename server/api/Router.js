@@ -16,6 +16,10 @@ module.exports = class Router {
         this.nasaOpenData();
     }
 
+    getRouter() {
+        return this.router;
+    }
+
     init () {
         this.router.use(function timeLog(req, res, next) {
             next();

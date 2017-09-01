@@ -1,26 +1,47 @@
 
 import React, {PropTypes } from 'react';
 
+
+const PictureView = ({picture}) => {
+
+    return (
+        <div>
+            <p> {picture.title} </p>
+            <p> {picture.date} </p>
+            <p> {picture.explanation}</p>
+            <img src={picture.url}/>
+        </div>
+    )
+
+};
+
 class Picture extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            name : props.name,
-        }
+            picture : props.picture,
+        };
+
     }
 
     render () {
         return (
-            <div>
-                {this.state.name}
-            </div>
+            <PictureView picture={this.state.picture} />
         )
     }
 }
 
 Picture.propTypes = {
-    name : PropTypes.string,
+    picture : PropTypes.shape({
+        title : PropTypes.string,
+        url : PropTypes.string,
+        hdurl : PropTypes.string,
+        explanation : PropTypes.string,
+        media_type : PropTypes.string,
+        date : PropTypes.string,
+        copyright : PropTypes.string
+    }),
 };
 
 export default Picture;
